@@ -1,9 +1,11 @@
 #!/bin/bash
 
 # Source the file with the function
-source ~/Load_Calculator/functions/
+source ~/Load_Calculator/functions/check_and_install_bc.sh
+source ~/Load_Calculator/functions/run_as_root.sh
 
 # Call the function
+run_as_root.sh
 check_and_install_bc
 
 sum=$2
