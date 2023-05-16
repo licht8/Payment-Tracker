@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Source the file with the function
-. ~/Load_Calculator/functions/check_and_install_bc.sh
-. ~/Load_Calculator/functions/run_as_root.sh
-#. ~/Load_Calculator/functions/check_sum.sh
-#. ~/Load_Calculator/functions/check_iteration.sh
+. ~/Loan_Calculator/functions/check_and_install_bc.sh
+. ~/Loan_Calculator/functions/run_as_root.sh
+. ~/Loan_Calculator/functions/check_sum.sh
+. ~/Loan_Calculator/functions/check_iteration.sh
 
 # Call the function
 run_as_root
@@ -22,18 +22,11 @@ echo -e "-----------------------------------------------------------------------
 while true; do
     mash=$(($mash + 1))
 
-    # Checking that the sum is not equal to 0
-    if awk -v sum="$sum" 'BEGIN { exit (sum != 0) ? 1 : 0 }'; then
-        echo -e "\rError: The sum cannot be equal to 0.\r" >&2
-        exit 1
-    fi
+    # Check that the sum is not equal to 0
+check_sum "$sum"
     
-    # Checking that the iteration number is not less than 0
-    if awk -v it="$it" 'BEGIN { exit (it >= 0) ? 1 : 0 }'; then
-        it=$(echo "$it" | sed 's/^-/0/')
-        echo -e "\n The loan in the amount of $2 will be fully repaid with a balance of +$it.\n It will take $num_iterations months to repay the loan.\n With a monthly payment of $commission\n" >&2
-        exit 1
-    fi
+    # Check that the iteration is not negative
+check_iteration "$it"
 
 
     # Calculate the percentage with 4 decimal places
