@@ -23,10 +23,10 @@ while true; do
     mash=$(($mash + 1))
 
     # Check that the sum is not equal to 0
-check_sum.sh
+~/Loan_Calculator/functions/check_sum.sh
     
     # Check that the iteration is not negative
-check_iteration.sh
+~/Loan_Calculator/functions/check_iteration.sh
 
     # Calculate the percentage with 4 decimal places
     percentage=$(echo "scale=4; $commission / $sum * 100" | bc -l) 2>/dev/null
