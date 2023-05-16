@@ -12,5 +12,6 @@ check_and_install_bc() {
             echo "Failed to install the 'bc' package. Please install it manually."
             exit 1
         fi
+        echo "The 'bc' package successfully installed."
     fi
 }
