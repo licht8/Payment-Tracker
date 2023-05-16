@@ -22,11 +22,19 @@ echo -e "-----------------------------------------------------------------------
 while true; do
     mash=$(($mash + 1))
 
-    # Check that the sum is not equal to 0
-check_sum "$sum"
+    # Проверяем, что сумма не равна 0
+    if awk -v sum="$sum" 'BEGIN { exit (sum != 0) ? 1 : 0 }'; then
+
+        echo -e "\rОшибка: сумма sum не может быть равна 0.\r" >&2
+        exit 1
+    fi
     
-    # Check that the iteration is not negative
-check_iteration "$it"
+    # Проверяем, что сумма не равна 0
+    if awk -v it="$it" 'BEGIN { exit (it >= 0) ? 1 : 0 }'; then
+        it=$(echo "$it" | sed 's/^-/0/')
+        echo -e "\n Кредит на сумму  $2  будет польностью  выплачен с балансом +$it.\n Вам потребуется $num_iterations месяцев\n При погашении кредита на сумму $commission в месяц\n" >&2
+        exit 1
+    fi
 
     # Calculate the percentage with 4 decimal places
     percentage=$(echo "scale=4; $commission / $sum * 100" | bc -l) 2>/dev/null
