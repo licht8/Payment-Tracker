@@ -46,7 +46,7 @@ while true; do
     it=$(echo "scale=4; $sum - $commission" | bc -l) 2>/dev/null
 
     # Output the result
-    echo -e "|  $num_iterations                   $percentage%                       $sum                        $commission                       $it" 
+    echo -e "|  $num_iterations                   $percentage%                      $sum                       $commission                     $it" 
 
     sum=$(echo "scale=4; $sum - $commission" | bc -l) 2>/dev/null
 done
