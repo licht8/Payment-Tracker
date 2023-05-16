@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Source the file with the function
-. ~/Loan_Calculator/functions/check_and_install_bc.sh
-. ~/Loan_Calculator/functions/run_as_root.sh
-. ~/Loan_Calculator/functions/check_sum.sh
-. ~/Loan_Calculator/functions/check_iteration.sh
+. ~/Loan-Calculator/functions/check_and_install_bc.sh
+. ~/Loan-Calculator/functions/run_as_root.sh
+. ~/Loan-Calculator/functions/check_sum.sh
+. ~/Loan-Calculator/functions/check_iteration.sh
 
 # Call the function
 run_as_root
