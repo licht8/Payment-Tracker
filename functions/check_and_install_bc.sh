@@ -5,9 +5,9 @@ check_and_install_bc() {
     if ! command -v bc >/dev/null 2>&1; then
         echo "The 'bc' package is not found. Installing the 'bc' package..."
         if command -v dnf >/dev/null 2>&1; then
-            sudo dnf install -y bc
+            sudo dnf install -y bc >/dev/null 2>&1
         elif command -v yum >/dev/null 2>&1; then
-            sudo yum install -y bc
+            sudo yum install -y bc >/dev/null 2>&1
         else
             echo "Failed to install the 'bc' package. Please install it manually."
             exit 1
