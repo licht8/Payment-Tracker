@@ -7,7 +7,7 @@
 
 Just a simple calculator for calculating the repayments of a fixed monthly loan.
 
-# Description:
+## Description:
  Enter for example ```./loan-calculator.sh 50 2500 300```
 * "50" is the expected number of months (you can use any number, the main thing is more than you need)
 * "2500" is the amount to be paid
