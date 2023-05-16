@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Source the file with the function
-source ~/Load_Calculator/functions/check_and_install_bc.sh
-source ~/Load_Calculator/functions/run_as_root.sh
-source ~/Load_Calculator/functions/check_sum.sh
-source ~/Load_Calculator/functions/check_iteration.sh
+. ~/Load_Calculator/functions/check_and_install_bc.sh
+. ~/Load_Calculator/functions/run_as_root.sh
+. ~/Load_Calculator/functions/check_sum.sh
+. ~/Load_Calculator/functions/check_iteration.sh
 
 # Call the function
 run_as_root
