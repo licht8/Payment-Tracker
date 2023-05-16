@@ -1,4 +1,4 @@
-# Loan-Calculator
+# Payment Tracker
 
 <div id="header" align="left">
   <img src="https://cdn-icons-png.flaticon.com/512/201/201558.png" width="150"/>
