@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Source the file with the function
-source ~/func/123.sh
+source ~/Load_Calculator/functions/
 
 # Call the function
 check_and_install_bc
