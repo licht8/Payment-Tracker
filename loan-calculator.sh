@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 
 # Source the file with the function
 . ~/Loan-Calculator/functions/check_and_install_bc.sh
@@ -6,7 +7,7 @@
 . ~/Loan-Calculator/functions/check_sum.sh
 . ~/Loan-Calculator/functions/check_iteration.sh
 
-# Call the function
+# Call the functions
 run_as_root
 check_and_install_bc
 
