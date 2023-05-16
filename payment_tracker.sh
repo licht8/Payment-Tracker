@@ -2,10 +2,10 @@
 clear
 
 # Source the file with the function
-. ~/Loan-Calculator/functions/check_and_install_bc.sh
-. ~/Loan-Calculator/functions/run_as_root.sh
-. ~/Loan-Calculator/functions/check_sum.sh
-. ~/Loan-Calculator/functions/check_iteration.sh
+. ~/Payment-Tracker/functions/check_and_install_bc.sh
+. ~/Payment-Tracker/functions/run_as_root.sh
+. ~/Payment-Tracker/functions/check_sum.sh
+. ~/Payment-Tracker/functions/check_iteration.sh
 
 # Call the functions
 run_as_root
