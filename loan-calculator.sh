@@ -7,7 +7,7 @@ source ~/Load_Calculator/functions/check_sum.sh
 source ~/Load_Calculator/functions/check_iteration.sh
 
 # Call the function
-run_as_root.sh
+run_as_root
 check_and_install_bc
 
 sum=$2
@@ -23,10 +23,10 @@ while true; do
     mash=$(($mash + 1))
 
     # Check that the sum is not equal to 0
-~/Loan_Calculator/functions/check_sum.sh
+check_sum "$sum"
     
     # Check that the iteration is not negative
-~/Loan_Calculator/functions/check_iteration.sh
+check_iteration "$it"
 
     # Calculate the percentage with 4 decimal places
     percentage=$(echo "scale=4; $commission / $sum * 100" | bc -l) 2>/dev/null
